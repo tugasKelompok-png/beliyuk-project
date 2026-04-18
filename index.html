@@ -19,7 +19,7 @@
 
 <br>
 
-<center>
+<div align="center">
 <table width="60%" bgcolor="white" cellpadding="15">
 <tr>
 <td>
@@ -49,7 +49,8 @@
 </tr>
 <tr>
 <td>
-<input type="tel" name="no_wa" size="30" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required>
+<input type="tel" name="no_wa" size="30" placeholder="08xxxxxxxxxx"
+pattern="[0-9]{10,13}" title="Masukkan 10-13 digit angka" required>
 </td>
 <td><input type="date" name="tgl_lahir" required></td>
 </tr>
@@ -78,7 +79,7 @@
 <td><label>Kategori</label></td>
 </tr>
 <tr>
-<td><input type="text" name="nama_produk" size="30" required></td>
+<td><input type="text" name="nama_produk" size="30" placeholder="Nama produk" required></td>
 <td>
 <select name="kategori" required>
 <option value="">-- Pilih Kategori --</option>
@@ -94,8 +95,8 @@
 <td><label>Warna</label></td>
 </tr>
 <tr>
-<td><input type="number" name="jumlah" min="1" required></td>
-<td><input type="text" name="warna" required></td>
+<td><input type="number" name="jumlah" min="1" placeholder="Jumlah" required></td>
+<td><input type="text" name="warna" placeholder="Contoh: Hitam" required></td>
 </tr>
 
 <tr>
@@ -113,7 +114,7 @@
 <option value="XL">XL</option>
 </select>
 </td>
-<td><input type="text" name="merek" required></td>
+<td><input type="text" name="merek" placeholder="Nama brand" required></td>
 </tr>
 
 <tr>
@@ -121,7 +122,7 @@
 <td></td>
 </tr>
 <tr>
-<td colspan="2"><textarea name="catatan" rows="3" cols="60"></textarea></td>
+<td colspan="2"><textarea name="catatan" rows="3" cols="60" placeholder="Catatan tambahan"></textarea></td>
 </tr>
 
 </table>
@@ -158,8 +159,11 @@
 <td><label>No HP</label></td>
 </tr>
 <tr>
-<td><input type="text" name="penerima" required></td>
-<td><input type="tel" name="no_hp" pattern="[0-9]{10,13}" required></td>
+<td><input type="text" name="penerima" placeholder="Nama penerima" required></td>
+<td>
+<input type="tel" name="no_hp" placeholder="08xxxxxxxxxx"
+pattern="[0-9]{10,13}" title="Masukkan 10-13 digit angka" required>
+</td>
 </tr>
 
 <tr>
@@ -167,8 +171,8 @@
 <td><label>Kota</label></td>
 </tr>
 <tr>
-<td><textarea name="alamat_kirim" required></textarea></td>
-<td><input type="text" name="kota" required></td>
+<td><textarea name="alamat_kirim" placeholder="Alamat lengkap" required></textarea></td>
+<td><input type="text" name="kota" placeholder="Nama kota" required></td>
 </tr>
 
 <tr>
@@ -176,7 +180,7 @@
 <td></td>
 </tr>
 <tr>
-<td><input type="text" name="kode_pos" pattern="[0-9]{5}" required></td>
+<td><input type="text" name="kode_pos" pattern="[0-9]{5}" placeholder="12345" required></td>
 <td></td>
 </tr>
 
@@ -221,8 +225,8 @@
 <td><label>Nama Pemilik</label></td>
 </tr>
 <tr>
-<td><input type="text" name="nomor" pattern="[0-9]{8,16}" required></td>
-<td><input type="text" name="nama_rekening" required></td>
+<td><input type="text" name="nomor" pattern="[0-9]{8,16}" placeholder="No rekening / e-wallet" required></td>
+<td><input type="text" name="nama_rekening" placeholder="Nama pemilik" required></td>
 </tr>
 
 <tr>
@@ -231,7 +235,7 @@
 </tr>
 <tr>
 <td><input type="file" name="bukti"></td>
-<td><input type="text" name="promo"></td>
+<td><input type="text" name="promo" placeholder="Kode promo"></td>
 </tr>
 
 </table>
@@ -266,7 +270,7 @@
 </td>
 
 <td>
-<textarea name="pesan"></textarea>
+<textarea name="pesan" placeholder="Tulis pesan tambahan"></textarea>
 </td>
 </tr>
 
@@ -276,17 +280,17 @@
 
 <br>
 
-<center>
+<div align="center">
 <input type="reset" value="🔄 Reset">
 <input type="submit" value="🛍️ Pesan Sekarang">
-</center>
+</div>
 
 </form>
 
 </td>
 </tr>
 </table>
-</center>
+</div>
 
 <br>
 
