@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BeliYuk – Form Pemesanan</title>
+</head>
+
+<body bgcolor="#f0f8ff">
+
+<!-- HEADER -->
+<table width="100%" bgcolor="#ffa500">
+<tr>
+<td align="center">
+<h1><font color="white">🛒 BeliYuk</font></h1>
+<h3><font color="white">Form Pemesanan Produk Online</font></h3>
+</td>
+</tr>
+</table>
+
+<br>
+
+<center>
+<table width="60%" bgcolor="white" cellpadding="15">
+<tr>
+<td>
+
+<form>
+
+<!-- DATA PEMESAN -->
+<fieldset>
+<legend><b><font color="orange">👤 Data Pemesan</font></b></legend>
+
+<table width="100%">
+<tr>
+<td>Nama</td>
+<td>Jenis Kelamin</td>
+</tr>
+<tr>
+<td><input type="text" size="30" placeholder="Nama lengkap" required></td>
+<td>
+<input type="radio" name="jk"> Laki-laki
+<input type="radio" name="jk"> Perempuan
+</td>
+</tr>
+
+<tr>
+<td>No WA</td>
+<td>Tanggal Lahir</td>
+</tr>
+<tr>
+<td><input type="tel" size="30" placeholder="08xxxxxxxxxx" required></td>
+<td><input type="date"></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td>Alamat</td>
+</tr>
+<tr>
+<td><input type="email" size="30" placeholder="email@gmail.com" required></td>
+<td><textarea rows="2" cols="25" placeholder="Alamat lengkap"></textarea></td>
+</tr>
+
+</table>
+</fieldset>
+
+<br>
+
+<!-- DETAIL PRODUK -->
+<fieldset>
+<legend><b><font color="orange">📦 Detail Produk</font></b></legend>
+
+<table width="100%">
+<tr>
+<td>Nama Produk</td>
+<td>Kategori</td>
+</tr>
+<tr>
+<td><input type="text" size="30" placeholder="Nama produk" required></td>
+<td>
+<select>
+<option>Elektronik</option>
+<option>Pakaian</option>
+<option>Makanan</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Jumlah</td>
+<td>Warna</td>
+</tr>
+<tr>
+<td><input type="number" min="1" placeholder="1"></td>
+<td><input type="text" placeholder="Hitam"></td>
+</tr>
+
+<tr>
+<td>Ukuran</td>
+<td>Merek</td>
+</tr>
+<tr>
+<td>
+<select>
+<option>Tidak ada ukuran</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+</td>
+<td><input type="text" placeholder="Brand"></td>
+</tr>
+
+<tr>
+<td>Catatan</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2"><textarea rows="3" cols="60" placeholder="Catatan tambahan"></textarea></td>
+</tr>
+
+</table>
+</fieldset>
+
+<br>
+
+<!-- PENGIRIMAN -->
+<fieldset>
+<legend><b><font color="orange">🚚 Pengiriman</font></b></legend>
+
+<table width="100%">
+<tr>
+<td>Metode</td>
+<td>Jasa Kirim</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="metode"> Kirim
+<input type="radio" name="metode"> Ambil
+</td>
+<td>
+<select>
+<option>JNE</option>
+<option>J&T</option>
+<option>SiCepat</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Nama Penerima</td>
+<td>No HP</td>
+</tr>
+<tr>
+<td><input type="text" size="30" placeholder="Nama penerima"></td>
+<td><input type="tel" size="30" placeholder="08xxxxxxxxxx"></td>
+</tr>
+
+<tr>
+<td>Alamat</td>
+<td>Kota</td>
+</tr>
+<tr>
+<td><textarea rows="2" cols="25" placeholder="Alamat lengkap"></textarea></td>
+<td><input type="text" placeholder="Kota"></td>
+</tr>
+
+<tr>
+<td>Kode Pos</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="text" placeholder="12345"></td>
+<td></td>
+</tr>
+
+</table>
+</fieldset>
+
+<br>
+
+<!-- PEMBAYARAN -->
+<fieldset>
+<legend><b><font color="orange">💳 Pembayaran</font></b></legend>
+
+<table width="100%">
+<tr>
+<td>Metode</td>
+<td>Bank</td>
+</tr>
+<tr>
+<td>
+<select>
+<option>Transfer Bank</option>
+<option>DANA</option>
+<option>GoPay</option>
+<option>QRIS</option>
+<option>COD</option>
+</select>
+</td>
+<td>
+<select>
+<option>BCA</option>
+<option>BRI</option>
+<option>BNI</option>
+<option>Mandiri</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Nomor</td>
+<td>Nama Pemilik</td>
+</tr>
+<tr>
+<td><input type="text" placeholder="No pembayaran"></td>
+<td><input type="text" placeholder="Nama rekening"></td>
+</tr>
+
+<tr>
+<td>Upload Bukti</td>
+<td>Kode Promo</td>
+</tr>
+<tr>
+<td><input type="file"></td>
+<td><input type="text" placeholder="Promo"></td>
+</tr>
+
+</table>
+</fieldset>
+
+<br>
+
+<!-- KONFIRMASI -->
+<fieldset>
+<legend><b><font color="orange">✅ Konfirmasi</font></b></legend>
+
+<table width="100%">
+
+<tr>
+<td colspan="2">
+<input type="checkbox" required> Setuju syarat & ketentuan<br>
+<input type="checkbox" required> Data sudah benar<br>
+<input type="checkbox"> Terima promo
+</td>
+</tr>
+
+<tr>
+<td width="50%"><b>Waktu Pengiriman</b></td>
+<td width="50%"><b>Pesan Tambahan</b></td>
+</tr>
+
+<tr>
+<td>
+<input type="radio" name="waktu"> Pagi<br>
+<input type="radio" name="waktu"> Siang<br>
+<input type="radio" name="waktu"> Malam
+</td>
+
+<td>
+<textarea rows="4" cols="30" placeholder="Tulis pesan di sini"></textarea>
+</td>
+</tr>
+
+</table>
+
+</fieldset>
+<br>
+
+<center>
+<input type="reset" value="🔄 Reset">
+<input type="submit" value="🛍️ Pesan Sekarang">
+</center>
+
+</form>
+
+</td>
+</tr>
+</table>
+</center>
+
+<br>
+
+<!-- FOOTER -->
+<table width="100%" bgcolor="#ffa500">
+<tr>
+<td align="center">
+<font color="white">© 2026 BeliYuk</font>
+</td>
+</tr>
+</table>
