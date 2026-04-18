@@ -38,7 +38,7 @@
 <tr>
 <td><input type="text" size="30" placeholder="Nama lengkap" required></td>
 <td>
-<input type="radio" name="jk"> Laki-laki
+<input type="radio" name="jk" required> Laki-laki
 <input type="radio" name="jk"> Perempuan
 </td>
 </tr>
@@ -48,8 +48,10 @@
 <td>Tanggal Lahir</td>
 </tr>
 <tr>
-<td><input type="tel" size="30" placeholder="08xxxxxxxxxx" required></td>
-<td><input type="date"></td>
+<td>
+<input type="tel" size="30" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required title="Masukkan 10-13 digit angka">
+</td>
+<td><input type="date" required></td>
 </tr>
 
 <tr>
@@ -58,7 +60,7 @@
 </tr>
 <tr>
 <td><input type="email" size="30" placeholder="email@gmail.com" required></td>
-<td><textarea rows="2" cols="25" placeholder="Alamat lengkap"></textarea></td>
+<td><textarea rows="2" cols="25" placeholder="Alamat lengkap" required></textarea></td>
 </tr>
 
 </table>
@@ -78,7 +80,8 @@
 <tr>
 <td><input type="text" size="30" placeholder="Nama produk" required></td>
 <td>
-<select>
+<select required>
+<option value="">-- Pilih Kategori --</option>
 <option>Elektronik</option>
 <option>Pakaian</option>
 <option>Makanan</option>
@@ -91,8 +94,8 @@
 <td>Warna</td>
 </tr>
 <tr>
-<td><input type="number" min="1" placeholder="1"></td>
-<td><input type="text" placeholder="Hitam"></td>
+<td><input type="number" min="1" required></td>
+<td><input type="text" placeholder="Hitam" required></td>
 </tr>
 
 <tr>
@@ -101,15 +104,16 @@
 </tr>
 <tr>
 <td>
-<select>
-<option>Tidak ada ukuran</option>
+<select required>
+<option value="">-- Pilih Ukuran --</option>
+<option value="none">Tidak ada ukuran</option>
 <option>S</option>
 <option>M</option>
 <option>L</option>
 <option>XL</option>
 </select>
 </td>
-<td><input type="text" placeholder="Brand"></td>
+<td><input type="text" placeholder="Brand" required></td>
 </tr>
 
 <tr>
@@ -136,11 +140,12 @@
 </tr>
 <tr>
 <td>
-<input type="radio" name="metode"> Kirim
+<input type="radio" name="metode" required> Kirim
 <input type="radio" name="metode"> Ambil
 </td>
 <td>
-<select>
+<select required>
+<option value="">-- Pilih Jasa Kirim --</option>
 <option>JNE</option>
 <option>J&T</option>
 <option>SiCepat</option>
@@ -153,8 +158,10 @@
 <td>No HP</td>
 </tr>
 <tr>
-<td><input type="text" size="30" placeholder="Nama penerima"></td>
-<td><input type="tel" size="30" placeholder="08xxxxxxxxxx"></td>
+<td><input type="text" size="30" placeholder="Nama penerima" required></td>
+<td>
+<input type="tel" size="30" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required>
+</td>
 </tr>
 
 <tr>
@@ -162,8 +169,8 @@
 <td>Kota</td>
 </tr>
 <tr>
-<td><textarea rows="2" cols="25" placeholder="Alamat lengkap"></textarea></td>
-<td><input type="text" placeholder="Kota"></td>
+<td><textarea rows="2" cols="25" placeholder="Alamat lengkap" required></textarea></td>
+<td><input type="text" placeholder="Kota" required></td>
 </tr>
 
 <tr>
@@ -171,7 +178,7 @@
 <td></td>
 </tr>
 <tr>
-<td><input type="text" placeholder="12345"></td>
+<td><input type="text" pattern="[0-9]{5}" placeholder="12345" required title="Kode pos 5 digit"></td>
 <td></td>
 </tr>
 
@@ -191,7 +198,8 @@
 </tr>
 <tr>
 <td>
-<select>
+<select required>
+<option value="">-- Pilih Metode --</option>
 <option>Transfer Bank</option>
 <option>DANA</option>
 <option>GoPay</option>
@@ -200,7 +208,8 @@
 </select>
 </td>
 <td>
-<select>
+<select required>
+<option value="">-- Pilih Bank --</option>
 <option>BCA</option>
 <option>BRI</option>
 <option>BNI</option>
@@ -214,8 +223,8 @@
 <td>Nama Pemilik</td>
 </tr>
 <tr>
-<td><input type="text" placeholder="No pembayaran"></td>
-<td><input type="text" placeholder="Nama rekening"></td>
+<td><input type="text" pattern="[0-9]{8,16}" placeholder="No pembayaran" required></td>
+<td><input type="text" placeholder="Nama rekening" required></td>
 </tr>
 
 <tr>
@@ -253,7 +262,7 @@
 
 <tr>
 <td>
-<input type="radio" name="waktu"> Pagi<br>
+<input type="radio" name="waktu" required> Pagi<br>
 <input type="radio" name="waktu"> Siang<br>
 <input type="radio" name="waktu"> Malam
 </td>
@@ -266,6 +275,7 @@
 </table>
 
 </fieldset>
+
 <br>
 
 <center>
@@ -290,3 +300,6 @@
 </td>
 </tr>
 </table>
+
+</body>
+</html>
