@@ -24,7 +24,7 @@
 <tr>
 <td>
 
-<form>
+<form action="#" method="post">
 
 <!-- DATA PEMESAN -->
 <fieldset>
@@ -32,35 +32,35 @@
 
 <table width="100%">
 <tr>
-<td>Nama</td>
-<td>Jenis Kelamin</td>
+<td><label>Nama</label></td>
+<td><label>Jenis Kelamin</label></td>
 </tr>
 <tr>
-<td><input type="text" size="30" placeholder="Nama lengkap" required></td>
+<td><input type="text" name="nama" size="30" placeholder="Nama lengkap" required></td>
 <td>
-<input type="radio" name="jk" required> Laki-laki
-<input type="radio" name="jk"> Perempuan
+<input type="radio" name="jk" value="Laki-laki" required> Laki-laki
+<input type="radio" name="jk" value="Perempuan"> Perempuan
 </td>
 </tr>
 
 <tr>
-<td>No WA</td>
-<td>Tanggal Lahir</td>
+<td><label>No WA</label></td>
+<td><label>Tanggal Lahir</label></td>
 </tr>
 <tr>
 <td>
-<input type="tel" size="30" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required title="Masukkan 10-13 digit angka">
+<input type="tel" name="no_wa" size="30" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required>
 </td>
-<td><input type="date" required></td>
+<td><input type="date" name="tgl_lahir" required></td>
 </tr>
 
 <tr>
-<td>Email</td>
-<td>Alamat</td>
+<td><label>Email</label></td>
+<td><label>Alamat</label></td>
 </tr>
 <tr>
-<td><input type="email" size="30" placeholder="email@gmail.com" required></td>
-<td><textarea rows="2" cols="25" placeholder="Alamat lengkap" required></textarea></td>
+<td><input type="email" name="email" size="30" placeholder="email@gmail.com" required></td>
+<td><textarea name="alamat" rows="2" cols="25" placeholder="Alamat lengkap" required></textarea></td>
 </tr>
 
 </table>
@@ -74,54 +74,54 @@
 
 <table width="100%">
 <tr>
-<td>Nama Produk</td>
-<td>Kategori</td>
+<td><label>Nama Produk</label></td>
+<td><label>Kategori</label></td>
 </tr>
 <tr>
-<td><input type="text" size="30" placeholder="Nama produk" required></td>
+<td><input type="text" name="nama_produk" size="30" required></td>
 <td>
-<select required>
+<select name="kategori" required>
 <option value="">-- Pilih Kategori --</option>
-<option>Elektronik</option>
-<option>Pakaian</option>
-<option>Makanan</option>
+<option value="elektronik">Elektronik</option>
+<option value="pakaian">Pakaian</option>
+<option value="makanan">Makanan</option>
 </select>
 </td>
 </tr>
 
 <tr>
-<td>Jumlah</td>
-<td>Warna</td>
+<td><label>Jumlah</label></td>
+<td><label>Warna</label></td>
 </tr>
 <tr>
-<td><input type="number" min="1" required></td>
-<td><input type="text" placeholder="Hitam" required></td>
+<td><input type="number" name="jumlah" min="1" required></td>
+<td><input type="text" name="warna" required></td>
 </tr>
 
 <tr>
-<td>Ukuran</td>
-<td>Merek</td>
+<td><label>Ukuran</label></td>
+<td><label>Merek</label></td>
 </tr>
 <tr>
 <td>
-<select required>
+<select name="ukuran" required>
 <option value="">-- Pilih Ukuran --</option>
 <option value="none">Tidak ada ukuran</option>
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
 </select>
 </td>
-<td><input type="text" placeholder="Brand" required></td>
+<td><input type="text" name="merek" required></td>
 </tr>
 
 <tr>
-<td>Catatan</td>
+<td><label>Catatan</label></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2"><textarea rows="3" cols="60" placeholder="Catatan tambahan"></textarea></td>
+<td colspan="2"><textarea name="catatan" rows="3" cols="60"></textarea></td>
 </tr>
 
 </table>
@@ -135,50 +135,48 @@
 
 <table width="100%">
 <tr>
-<td>Metode</td>
-<td>Jasa Kirim</td>
+<td><label>Metode</label></td>
+<td><label>Jasa Kirim</label></td>
 </tr>
 <tr>
 <td>
-<input type="radio" name="metode" required> Kirim
-<input type="radio" name="metode"> Ambil
+<input type="radio" name="metode" value="kirim" required> Kirim
+<input type="radio" name="metode" value="ambil"> Ambil
 </td>
 <td>
-<select required>
-<option value="">-- Pilih Jasa Kirim --</option>
-<option>JNE</option>
-<option>J&T</option>
-<option>SiCepat</option>
+<select name="jasa_kirim" required>
+<option value="">-- Pilih Jasa --</option>
+<option value="jne">JNE</option>
+<option value="jnt">J&T</option>
+<option value="sicepat">SiCepat</option>
 </select>
 </td>
 </tr>
 
 <tr>
-<td>Nama Penerima</td>
-<td>No HP</td>
+<td><label>Nama Penerima</label></td>
+<td><label>No HP</label></td>
 </tr>
 <tr>
-<td><input type="text" size="30" placeholder="Nama penerima" required></td>
-<td>
-<input type="tel" size="30" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required>
-</td>
+<td><input type="text" name="penerima" required></td>
+<td><input type="tel" name="no_hp" pattern="[0-9]{10,13}" required></td>
 </tr>
 
 <tr>
-<td>Alamat</td>
-<td>Kota</td>
+<td><label>Alamat</label></td>
+<td><label>Kota</label></td>
 </tr>
 <tr>
-<td><textarea rows="2" cols="25" placeholder="Alamat lengkap" required></textarea></td>
-<td><input type="text" placeholder="Kota" required></td>
+<td><textarea name="alamat_kirim" required></textarea></td>
+<td><input type="text" name="kota" required></td>
 </tr>
 
 <tr>
-<td>Kode Pos</td>
+<td><label>Kode Pos</label></td>
 <td></td>
 </tr>
 <tr>
-<td><input type="text" pattern="[0-9]{5}" placeholder="12345" required title="Kode pos 5 digit"></td>
+<td><input type="text" name="kode_pos" pattern="[0-9]{5}" required></td>
 <td></td>
 </tr>
 
@@ -193,47 +191,47 @@
 
 <table width="100%">
 <tr>
-<td>Metode</td>
-<td>Bank</td>
+<td><label>Metode</label></td>
+<td><label>Bank</label></td>
 </tr>
 <tr>
 <td>
-<select required>
-<option value="">-- Pilih Metode --</option>
-<option>Transfer Bank</option>
-<option>DANA</option>
-<option>GoPay</option>
-<option>QRIS</option>
-<option>COD</option>
+<select name="metode_bayar" required>
+<option value="">-- Pilih --</option>
+<option value="transfer">Transfer Bank</option>
+<option value="dana">DANA</option>
+<option value="gopay">GoPay</option>
+<option value="qris">QRIS</option>
+<option value="cod">COD</option>
 </select>
 </td>
 <td>
-<select required>
+<select name="bank" required>
 <option value="">-- Pilih Bank --</option>
-<option>BCA</option>
-<option>BRI</option>
-<option>BNI</option>
-<option>Mandiri</option>
+<option value="bca">BCA</option>
+<option value="bri">BRI</option>
+<option value="bni">BNI</option>
+<option value="mandiri">Mandiri</option>
 </select>
 </td>
 </tr>
 
 <tr>
-<td>Nomor</td>
-<td>Nama Pemilik</td>
+<td><label>Nomor</label></td>
+<td><label>Nama Pemilik</label></td>
 </tr>
 <tr>
-<td><input type="text" pattern="[0-9]{8,16}" placeholder="No pembayaran" required></td>
-<td><input type="text" placeholder="Nama rekening" required></td>
+<td><input type="text" name="nomor" pattern="[0-9]{8,16}" required></td>
+<td><input type="text" name="nama_rekening" required></td>
 </tr>
 
 <tr>
-<td>Upload Bukti</td>
-<td>Kode Promo</td>
+<td><label>Upload Bukti</label></td>
+<td><label>Kode Promo</label></td>
 </tr>
 <tr>
-<td><input type="file"></td>
-<td><input type="text" placeholder="Promo"></td>
+<td><input type="file" name="bukti"></td>
+<td><input type="text" name="promo"></td>
 </tr>
 
 </table>
@@ -249,26 +247,26 @@
 
 <tr>
 <td colspan="2">
-<input type="checkbox" required> Setuju syarat & ketentuan<br>
-<input type="checkbox" required> Data sudah benar<br>
-<input type="checkbox"> Terima promo
+<input type="checkbox" name="setuju" required> Setuju syarat<br>
+<input type="checkbox" name="valid" required> Data benar<br>
+<input type="checkbox" name="promo"> Terima promo
 </td>
 </tr>
 
 <tr>
-<td width="50%"><b>Waktu Pengiriman</b></td>
-<td width="50%"><b>Pesan Tambahan</b></td>
+<td><b>Waktu</b></td>
+<td><b>Pesan</b></td>
 </tr>
 
 <tr>
 <td>
-<input type="radio" name="waktu" required> Pagi<br>
-<input type="radio" name="waktu"> Siang<br>
-<input type="radio" name="waktu"> Malam
+<input type="radio" name="waktu" value="pagi" required> Pagi<br>
+<input type="radio" name="waktu" value="siang"> Siang<br>
+<input type="radio" name="waktu" value="malam"> Malam
 </td>
 
 <td>
-<textarea rows="4" cols="30" placeholder="Tulis pesan di sini"></textarea>
+<textarea name="pesan"></textarea>
 </td>
 </tr>
 
