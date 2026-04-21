@@ -1,296 +1,330 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>BeliYuk - Form Pemesanan</title>
+    <title>BeliYuk - Form Pemesanan</title>
 </head>
 
 <body>
 
-<!-- JUDUL -->
-<div align="center">
-<h1>🛒 BeliYuk</h1>
-<h3>Form Pemesanan Produk Online</h3>
-</div>
+    <!-- JUDUL -->
+    <div align="center">
+        <h1>🛒 BeliYuk</h1>
+        <h3>Form Pemesanan Produk Online</h3>
+    </div>
 
-<br>
+    <br>
 
-<div align="center">
+    <div align="center">
+        <form>
 
-<form>
+            <!-- DATA PEMESAN -->
+            <fieldset style="width:60%">
+                <legend><b>Data Pemesan</b></legend>
 
-<!-- DATA PEMESAN -->
-<fieldset style="width:60%">
-<legend><b>Data Pemesan</b></legend>
+                <table border="1" cellpadding="10" width="100%">
 
-<table border="1" cellpadding="10" width="100%">
+                    <tr>
+                        <td>Nama lengkap:</td>
+                        <td>
+                            <input type="text" name="nama" placeholder="Nama lengkap" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Nama lengkap:</td>
-<td><input type="text" name="nama" placeholder="Nama lengkap" required></td>
-</tr>
+                    <tr>
+                        <td>Jenis kelamin:</td>
+                        <td>
+                            <input type="radio" name="jk" value="L" required> Laki-laki
+                            <input type="radio" name="jk" value="P"> Perempuan
+                        </td>
+                    </tr>
 
-<tr>
-<td>Jenis kelamin:</td>
-<td>
-<input type="radio" name="jk" value="L" required> Laki-laki
-<input type="radio" name="jk" value="P"> Perempuan
-</td>
-</tr>
+                    <tr>
+                        <td>No WhatsApp:</td>
+                        <td>
+                            <input type="tel" name="no_wa" placeholder="08xxxxxxxxxx"
+                                   pattern="[0-9]{10,13}" title="10-13 digit" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>No WhatsApp:</td>
-<td>
-<input type="tel" name="no_wa" placeholder="08xxxxxxxxxx"
-pattern="[0-9]{10,13}" title="10-13 digit" required>
-</td>
-</tr>
+                    <tr>
+                        <td>Tanggal lahir:</td>
+                        <td>
+                            <input type="date" name="tgl_lahir" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Tanggal lahir:</td>
-<td><input type="date" name="tgl_lahir" required></td>
-</tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>
+                            <input type="email" name="email" placeholder="email@gmail.com" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Email:</td>
-<td><input type="email" name="email" placeholder="email@gmail.com" required></td>
-</tr>
+                    <tr>
+                        <td>Alamat:</td>
+                        <td>
+                            <textarea name="alamat" placeholder="Alamat lengkap" required></textarea>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Alamat:</td>
-<td><textarea name="alamat" placeholder="Alamat lengkap" required></textarea></td>
-</tr>
+                </table>
+            </fieldset>
 
-</table>
-</fieldset>
+            <br>
 
-<br>
+            <!-- DETAIL PRODUK -->
+            <fieldset style="width:60%">
+                <legend><b>Detail Produk</b></legend>
 
-<!-- DETAIL PRODUK -->
-<fieldset style="width:60%">
-<legend><b>Detail Produk</b></legend>
+                <table border="1" cellpadding="10" width="100%">
 
-<table border="1" cellpadding="10" width="100%">
+                    <tr>
+                        <td>Nama Produk:</td>
+                        <td>
+                            <input type="text" name="nama_produk" placeholder="Nama produk" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Nama Produk:</td>
-<td><input type="text" name="nama_produk" placeholder="Nama produk" required></td>
-</tr>
+                    <tr>
+                        <td>Kategori:</td>
+                        <td>
+                            <select name="kategori" required>
+                                <option value="">-- Pilih --</option>
+                                <option value="elektronik">Elektronik</option>
+                                <option value="pakaian">Pakaian</option>
+                                <option value="makanan">Makanan</option>
+                            </select>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Kategori:</td>
-<td>
-<select name="kategori" required>
-<option value="">-- Pilih --</option>
-<option value="elektronik">Elektronik</option>
-<option value="pakaian">Pakaian</option>
-<option value="makanan">Makanan</option>
-</select>
-</td>
-</tr>
+                    <tr>
+                        <td>Jumlah:</td>
+                        <td>
+                            <input type="number" name="jumlah" min="1" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Jumlah:</td>
-<td><input type="number" name="jumlah" min="1" required></td>
-</tr>
+                    <tr>
+                        <td>Warna:</td>
+                        <td>
+                            <input type="text" name="warna" placeholder="Hitam" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Warna:</td>
-<td><input type="text" name="warna" placeholder="Hitam" required></td>
-</tr>
+                    <tr>
+                        <td>Ukuran:</td>
+                        <td>
+                            <select name="ukuran" required>
+                                <option value="none">Tidak ada ukuran</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Ukuran:</td>
-<td>
-<select name="ukuran" required>
-<option value="none">Tidak ada ukuran</option>
-<option value="S">S</option>
-<option value="M">M</option>
-<option value="L">L</option>
-<option value="XL">XL</option>
-</select>
-</td>
-</tr>
+                    <tr>
+                        <td>Merek:</td>
+                        <td>
+                            <input type="text" name="merek" placeholder="Brand" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Merek:</td>
-<td><input type="text" name="merek" placeholder="Brand" required></td>
-</tr>
+                    <tr>
+                        <td>Catatan:</td>
+                        <td>
+                            <textarea name="catatan" placeholder="Catatan tambahan"></textarea>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Catatan:</td>
-<td><textarea name="catatan" placeholder="Catatan tambahan"></textarea></td>
-</tr>
+                </table>
+            </fieldset>
 
-</table>
-</fieldset>
+            <br>
 
-<br>
+            <!-- PENGIRIMAN -->
+            <fieldset style="width:60%">
+                <legend><b>Pengiriman</b></legend>
 
-<!-- PENGIRIMAN -->
-<fieldset style="width:60%">
-<legend><b>Pengiriman</b></legend>
+                <table border="1" cellpadding="10" width="100%">
 
-<table border="1" cellpadding="10" width="100%">
+                    <tr>
+                        <td>Metode Pengiriman:</td>
+                        <td>
+                            <input type="radio" name="metode" value="kirim" required> Kirim
+                            <input type="radio" name="metode" value="ambil"> Ambil
+                        </td>
+                    </tr>
 
-<tr>
-<td>Metode Pengiriman:</td>
-<td>
-<input type="radio" name="metode" value="kirim" required> Kirim
-<input type="radio" name="metode" value="ambil"> Ambil
-</td>
-</tr>
+                    <tr>
+                        <td>Jasa Kirim:</td>
+                        <td>
+                            <select name="jasa_kirim" required>
+                                <option value="">-- Pilih --</option>
+                                <option>JNE</option>
+                                <option>J&T</option>
+                                <option>SiCepat</option>
+                            </select>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Jasa Kirim:</td>
-<td>
-<select name="jasa_kirim" required>
-<option value="">-- Pilih --</option>
-<option>JNE</option>
-<option>J&T</option>
-<option>SiCepat</option>
-</select>
-</td>
-</tr>
+                    <tr>
+                        <td>Nama Penerima:</td>
+                        <td>
+                            <input type="text" name="penerima" placeholder="Nama penerima" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Nama Penerima:</td>
-<td><input type="text" name="penerima" placeholder="Nama penerima" required></td>
-</tr>
+                    <tr>
+                        <td>No HP Penerima:</td>
+                        <td>
+                            <input type="tel" name="no_hp" pattern="[0-9]{10,13}" placeholder="08xxxxxxxxxx" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>No HP Penerima:</td>
-<td>
-<input type="tel" name="no_hp" pattern="[0-9]{10,13}" placeholder="08xxxxxxxxxx" required>
-</td>
-</tr>
+                    <tr>
+                        <td>Alamat Kirim:</td>
+                        <td>
+                            <textarea name="alamat_kirim" placeholder="Alamat tujuan" required></textarea>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Alamat Kirim:</td>
-<td><textarea name="alamat_kirim" placeholder="Alamat tujuan" required></textarea></td>
-</tr>
+                    <tr>
+                        <td>Kota:</td>
+                        <td>
+                            <input type="text" name="kota" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Kota:</td>
-<td><input type="text" name="kota" required></td>
-</tr>
+                    <tr>
+                        <td>Kode Pos:</td>
+                        <td>
+                            <input type="text" name="kode_pos" pattern="[0-9]{5}" placeholder="12345" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Kode Pos:</td>
-<td><input type="text" name="kode_pos" pattern="[0-9]{5}" placeholder="12345" required></td>
-</tr>
+                </table>
+            </fieldset>
 
-</table>
-</fieldset>
+            <br>
 
-<br>
+            <!-- PEMBAYARAN -->
+            <fieldset style="width:60%">
+                <legend><b>Pembayaran</b></legend>
 
-<!-- PEMBAYARAN -->
-<fieldset style="width:60%">
-<legend><b>Pembayaran</b></legend>
+                <table border="1" cellpadding="10" width="100%">
 
-<table border="1" cellpadding="10" width="100%">
+                    <tr>
+                        <td>Metode Pembayaran:</td>
+                        <td>
+                            <select name="metode_bayar" required>
+                                <option value="">-- Pilih --</option>
+                                <option>Transfer</option>
+                                <option>DANA</option>
+                                <option>GoPay</option>
+                                <option>QRIS</option>
+                                <option>COD</option>
+                            </select>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Metode Pembayaran:</td>
-<td>
-<select name="metode_bayar" required>
-<option value="">-- Pilih --</option>
-<option>Transfer</option>
-<option>DANA</option>
-<option>GoPay</option>
-<option>QRIS</option>
-<option>COD</option>
-</select>
-</td>
-</tr>
+                    <tr>
+                        <td>Bank:</td>
+                        <td>
+                            <select name="bank" required>
+                                <option value="">-- Pilih --</option>
+                                <option>BCA</option>
+                                <option>BRI</option>
+                                <option>BNI</option>
+                                <option>Mandiri</option>
+                            </select>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Bank:</td>
-<td>
-<select name="bank" required>
-<option value="">-- Pilih --</option>
-<option>BCA</option>
-<option>BRI</option>
-<option>BNI</option>
-<option>Mandiri</option>
-</select>
-</td>
-</tr>
+                    <tr>
+                        <td>No Pembayaran:</td>
+                        <td>
+                            <input type="text" name="nomor" placeholder="No rekening" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>No Pembayaran:</td>
-<td><input type="text" name="nomor" placeholder="No rekening" required></td>
-</tr>
+                    <tr>
+                        <td>Nama Pemilik:</td>
+                        <td>
+                            <input type="text" name="nama_pemilik" required>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Nama Pemilik:</td>
-<td><input type="text" name="nama_pemilik" required></td>
-</tr>
+                    <tr>
+                        <td>Upload Bukti:</td>
+                        <td>
+                            <input type="file" name="bukti">
+                        </td>
+                    </tr>
 
-<tr>
-<td>Upload Bukti:</td>
-<td><input type="file" name="bukti"></td>
-</tr>
+                    <tr>
+                        <td>Kode Promo:</td>
+                        <td>
+                            <input type="text" name="promo">
+                        </td>
+                    </tr>
 
-<tr>
-<td>Kode Promo:</td>
-<td><input type="text" name="promo"></td>
-</tr>
+                </table>
+            </fieldset>
 
-</table>
-</fieldset>
+            <br>
 
-<br>
+            <!-- KONFIRMASI -->
+            <fieldset style="width:60%">
+                <legend><b>Konfirmasi</b></legend>
 
-<!-- KONFIRMASI -->
-<fieldset style="width:60%">
-<legend><b>Konfirmasi</b></legend>
+                <table border="1" cellpadding="10" width="100%">
 
-<table border="1" cellpadding="10" width="100%">
+                    <tr>
+                        <td>Waktu Pengiriman:</td>
+                        <td>
+                            <input type="radio" name="waktu" value="pagi" required> Pagi
+                            <input type="radio" name="waktu" value="siang"> Siang
+                            <input type="radio" name="waktu" value="malam"> Malam
+                        </td>
+                    </tr>
 
-<tr>
-<td>Waktu Pengiriman:</td>
-<td>
-<input type="radio" name="waktu" value="pagi" required> Pagi
-<input type="radio" name="waktu" value="siang"> Siang
-<input type="radio" name="waktu" value="malam"> Malam
-</td>
-</tr>
+                    <tr>
+                        <td>Pesan:</td>
+                        <td>
+                            <textarea name="pesan"></textarea>
+                        </td>
+                    </tr>
 
-<tr>
-<td>Pesan:</td>
-<td><textarea name="pesan"></textarea></td>
-</tr>
+                    <tr>
+                        <td>Konfirmasi:</td>
+                        <td>
+                            <input type="checkbox" name="setuju" required> Setuju syarat<br>
+                            <input type="checkbox" name="valid" required> Data benar<br>
+                            <input type="checkbox" name="promo_user"> Terima promo
+                        </td>
+                    </tr>
 
-<tr>
-<td>Konfirmasi:</td>
-<td>
-<input type="checkbox" name="setuju" required> Setuju syarat<br>
-<input type="checkbox" name="valid" required> Data benar<br>
-<input type="checkbox" name="promo_user"> Terima promo
-</td>
-</tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Kirim">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
 
-<tr>
-<td colspan="2" align="center">
-<input type="submit" value="Kirim">
-<input type="reset" value="Reset">
-</td>
-</tr>
+                </table>
+            </fieldset>
 
-</table>
-</fieldset>
+        </form>
+    </div>
 
-</form>
+    <br>
 
-</div>
-
-<br>
-
-<!-- FOOTER -->
-<div align="center">
-<p>© 2026 BeliYuk</p>
-</div>
+    <!-- FOOTER -->
+    <div align="center">
+        <p>© 2026 BeliYuk</p>
+    </div>
 
 </body>
 </html>
